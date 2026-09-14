@@ -21,6 +21,7 @@
   verible_0_0_4080 = pkgs.callPackage ./verible_0_0_4080.nix {};
   # libclang for the rules_rust bindgen toolchain (see pkgs/libclang.nix).
   libclang_21 = pkgs.callPackage ./libclang.nix {llvmPackages = pkgs.llvmPackages_21;};
+  sv-lang_11 = import ./sv-lang11.nix {inherit pkgs;};
 
   # CherIoT packages
   spike-ibex-cosim = pkgs.callPackage ./spike.nix {};
@@ -44,7 +45,7 @@
   parallel-cp = pkgs.callPackage ./parallel-cp.nix {};
 
   uf2conv = pkgs.callPackage ./uf2conv.nix {};
-  sv-lang_7 = import ./sv-lang.nix {inherit pkgs;};
+  sv-lang_7 = import ./sv-lang7.nix {inherit pkgs;};
   sv-bugpoint = pkgs.callPackage ./sv-bugpoint.nix {sv-lang = sv-lang_7;};
   veridian = pkgs.callPackage ./veridian/default.nix {inherit sv-lang_7;};
   peakrdl = pkgs.callPackage ./peakrdl.nix {};
