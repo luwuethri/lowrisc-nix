@@ -9,6 +9,7 @@
   python_ot,
   verilator_ot,
   verible_ot,
+  sv-lang_11,
   lowrisc-toolchain-gcc-rv32imcb,
   edaTools ? [],
   wrapCCWith,
@@ -66,6 +67,7 @@ in
           bazel_ot
           verilator_ot
           verible_ot
+          sv-lang_11
 
           # Python dependencies
           python_ot
